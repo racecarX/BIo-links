@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-echo: echo 8s ease-out infinite;
+  --animate-heartbeat: heartbeat 0.8s ease-in-out infinite;
+  --animate-inner-pulse: inner-pulse 0.8s ease-in-out infinite;
+  --animate-fade-in-up: fadeInUp 0.5s ease-out forwards;
+  --animate-slide-in-left: slideInLeft 0.5s ease-out forwards;
+
+  @keyframes echo {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(4); opacity: 0.2; }
+    100% { transform: scale(8); opacity: 0; }
+  }
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  @keyframes inner-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0; }
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+}
